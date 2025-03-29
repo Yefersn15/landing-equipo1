@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda LEGO</title>
+    <link rel="stylesheet" href="CSS/Lego.css">
+</head>
+
+<body>
+    <div class="barra-anuncios">
+        <p>Explora las últimas novedades y ofertas exclusivas</p>
+    </div>
+
+    <header class="encabezado">
+        <img class="logo" src="IMG/Logo_Lego.png" alt="Logo LEGO">
+        <nav class="menu-navegacion">
+            <ul>
+                <li class="desplegable">
+                    <a href="#" onclick="toggleMenu('venta')">Venta</a>
+                </li>
+                <li class="desplegable">
+                    <a href="#" onclick="toggleMenu('descubrir')">Descubrir</a>
+                </li>
+                <li class="desplegable">
+                    <a href="#" onclick="toggleMenu('ayuda')">Ayuda</a>
+                </li>
+            </ul>
+
+            <!-- Contenedor del menú desplegado -->
+            <div id="menu" class="menu-completo">
+                <button class="cerrar-menu" onclick="toggleMenu()">✖</button>
+                <div id="menu-header"></div>
+                <ul id="menu-content"></ul>
+            </div>
+
+            <ul id="venta" class="menu-desplegable">
+                <li><a href="#">Sets por tema</a></li>
+                <li><a href="#">Edad</a></li>
+                <li><a href="#">Rangos de precios</a></li>
+                <li><a href="#">Comprar para ocasiones</a></li>
+                <li><a href="#">Merchandising LEGO®</a></li>
+                <li><a href="#">Decoración LEGO®</a></li>
+                <li><a href="#">Intereses</a></li>
+                <li><a href="#">Piezas y bloques</a></li>
+                <li><a href="#">Exclusivos</a></li>
+                <li><a href="#">Novedades</a></li>
+                <li><a href="#">Más vendidos</a></li>
+                <li><a href="#">Ofertas y descuentos</a></li>
+                <li><a href="#">Tarjetas de regalo</a></li>
+                <li><a href="#">Próximamente</a></li>
+                <li><a href="#">Próximos a retirarse</a></li>
+            </ul>
+
+            <ul id="descubrir" class="menu-desplegable">
+                <li><a href="#">Nuestros valores</a></li>
+                <li><a href="#">Nuestras apps</a></li>
+                <li><a href="#">Nuestras revistas</a></li>
+                <li><a href="#">Transmisiones en vivo</a></li>
+                <li><a href="#">Todos los temas LEGO®</a></li>
+                <li><a href="#">Todos los intereses LEGO®</a></li>
+                <li><a href="#">Encuentra inspiración</a></li>
+                <li><a href="#">Bienvenidos adultos</a></li>
+                <li><a href="#">Para familias</a></li>
+                <li><a href="#">Preescolar</a></li>
+                <li><a href="#">LEGO® Fortnite®</a></li>
+                <li><a href="#">LEGO® Insiders</a></li>
+                <li><a href="#">LEGO® Mosaic Maker</a></li>
+                <li><a href="#">Ideas para regalos LEGO®</a></li>
+            </ul>
+
+            <ul id="ayuda" class="menu-desplegable">
+                <li><a href="#">Estado de mi pedido</a></li>
+                <li><a href="#">Envíos y devoluciones</a></li>
+                <li><a href="#">Encuentra una tienda LEGO</a></li>
+                <li><a href="#">Encuentra instrucciones de construcción</a></li>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Piezas de repuesto</a></li>
+            </ul>
+
+
+            <button id="boton-sets" class="boton-sets">
+                <img src="icono-menu.svg" alt="todos los sets">
+
+            </button>
+            <div id="menu-sets" class="menu-sets">
+                <ul>
+                    <li><a href="#">Set 1</a></li>
+                    <li><a href="#">Set 2</a></li>
+                    <li><a href="#">Set 3</a></li>
+                </ul>
+            </div>
+            </ul>
+        </nav>
+
+        <div class="buscador" id="buscador">
+            <input type="text" placeholder="Buscar...">
+            <button onclick="toggleBuscador();">
+                <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Buscar">
+            </button>
+        </div>
+
+
+        <div class="iconos-navegacion">
+            <a href="#" class="icono">
+                <img src="IMG/corazon.png" alt="Favoritos">
+            </a>
+            <a href="#" class="icono">
+                <img src="IMG/bolsa-de-la-compra.png" alt="Carrito de compras">
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="seccion-principal">
+            <img src="https://www.lego.com/cdn/cs/set/assets/bltdd988d29da9f7ab2/1996-2025-Homepage-Hero-Standard-All-Ten-Medium.jpg?fit=crop&format=webply&quality=80&width=900&height=350&dpr=1"
+                alt="LEGO Hero">
+            <div class="contenido-principal">
+                <h2>Construye el equipo de tus sueños</h2>
+                <p>Completa la parrilla con la gama de coches de F1® LEGO®, en la que hay un equipo para cada aficionado
+                    a las carreras.</p>
+                <a href="#" class="boton-primario">Comprar colección</a>
+                <a href="#" class="boton-secundario">Saber más</a>
+            </div>
+        </section>
+
+        <div class="grid-container">
+            <div class="grid-item"><img
+                    src="https://www.lego.com/cdn/cs/set/assets/blta6e69aaa6a8814f9/Jan-Feb-DrivePeriod-Home-202401-Quicklink-New.png?format=webply&fit=crop&quality=75&width=74&dpr=1%201x,%20https://www.lego.com/cdn/cs/set/assets/blta6e69aaa6a8814f9/Jan-Feb-DrivePeriod-Home-202401-Quicklink-New.png?format=webply&fit=crop&quality=60&width=74&dpr=2%202x,%20https://www.lego.com/cdn/cs/set/assets/blta6e69aaa6a8814f9/Jan-Feb-DrivePeriod-Home-202401-Quicklink-New.png?format=webply&fit=crop&quality=55&width=74&dpr=3%203x,%20https://www.lego.com/cdn/cs/set/assets/blta6e69aaa6a8814f9/Jan-Feb-DrivePeriod-Home-202401-Quicklink-New.png?format=webply&fit=crop&quality=70&width=74&dpr=1.5%201.5x%22"
+                    alt=""></div>
+            <div class="grid-item"><img
+                    src="https://www.lego.com/cdn/cs/set/assets/bltea57974da2e170ca/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Exclusive.png?format=webply&fit=crop&quality=75&width=74&dpr=1%201x,%20https://www.lego.com/cdn/cs/set/assets/bltea57974da2e170ca/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Exclusive.png?format=webply&fit=crop&quality=60&width=74&dpr=2%202x,%20https://www.lego.com/cdn/cs/set/assets/bltea57974da2e170ca/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Exclusive.png?format=webply&fit=crop&quality=55&width=74&dpr=3%203x,%20https://www.lego.com/cdn/cs/set/assets/bltea57974da2e170ca/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Exclusive.png?format=webply&fit=crop&quality=70&width=74&dpr=1.5%201.5x%22"
+                    alt=""></div>
+            <div class="grid-item"><img
+                    src="https://www.lego.com/cdn/cs/set/assets/blte02a20b2427c36ca/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Offer.png?format=webply&fit=crop&quality=75&width=74&dpr=1%201x,%20https://www.lego.com/cdn/cs/set/assets/blte02a20b2427c36ca/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Offer.png?format=webply&fit=crop&quality=60&width=74&dpr=2%202x,%20https://www.lego.com/cdn/cs/set/assets/blte02a20b2427c36ca/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Offer.png?format=webply&fit=crop&quality=55&width=74&dpr=3%203x,%20https://www.lego.com/cdn/cs/set/assets/blte02a20b2427c36ca/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Offer.png?format=webply&fit=crop&quality=70&width=74&dpr=1.5%201.5x%22"
+                    alt=""></div>
+            <div class="grid-item"><img
+                    src="https://www.lego.com/cdn/cs/set/assets/bltdecfa42ec1a8ec2f/shop-all-2024-Quicklink.png?format=webply&fit=crop&quality=75&width=74&dpr=1%201x,%20https://www.lego.com/cdn/cs/set/assets/bltdecfa42ec1a8ec2f/shop-all-2024-Quicklink.png?format=webply&fit=crop&quality=60&width=74&dpr=2%202x,%20https://www.lego.com/cdn/cs/set/assets/bltdecfa42ec1a8ec2f/shop-all-2024-Quicklink.png?format=webply&fit=crop&quality=55&width=74&dpr=3%203x,%20https://www.lego.com/cdn/cs/set/assets/bltdecfa42ec1a8ec2f/shop-all-2024-Quicklink.png?format=webply&fit=crop&quality=70&width=74&dpr=1.5%201.5x%22"
+                    alt=""></div>
+            <div class="grid-item"><img
+                    src="https://www.lego.com/cdn/cs/set/assets/bltebf299a6c3159547/NewQuicklinks-202405-AdultsWelcome.png?format=webply&fit=crop&quality=75&width=74&dpr=1%201x,%20https://www.lego.com/cdn/cs/set/assets/bltebf299a6c3159547/NewQuicklinks-202405-AdultsWelcome.png?format=webply&fit=crop&quality=60&width=74&dpr=2%202x,%20https://www.lego.com/cdn/cs/set/assets/bltebf299a6c3159547/NewQuicklinks-202405-AdultsWelcome.png?format=webply&fit=crop&quality=55&width=74&dpr=3%203x,%20https://www.lego.com/cdn/cs/set/assets/bltebf299a6c3159547/NewQuicklinks-202405-AdultsWelcome.png?format=webply&fit=crop&quality=70&width=74&dpr=1.5%201.5x%22"
+                    alt=""></div>
+            <div class="grid-item"><img
+                    src="https://www.lego.com/cdn/cs/set/assets/bltcfe75f0d06ef6dca/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Pre.png?format=webply&fit=crop&quality=75&width=74&dpr=1%201x,%20https://www.lego.com/cdn/cs/set/assets/bltcfe75f0d06ef6dca/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Pre.png?format=webply&fit=crop&quality=60&width=74&dpr=2%202x,%20https://www.lego.com/cdn/cs/set/assets/bltcfe75f0d06ef6dca/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Pre.png?format=webply&fit=crop&quality=55&width=74&dpr=3%203x,%20https://www.lego.com/cdn/cs/set/assets/bltcfe75f0d06ef6dca/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Pre.png?format=webply&fit=crop&quality=70&width=74&dpr=1.5%201.5x%22"
+                    alt=""></div>
+            <div class="grid-item"><img
+                    src="https://www.lego.com/cdn/cs/set/assets/blt49a40456f71c9602/A2026_Quicklink_Small_V02.png?format=webply&fit=crop&quality=75&width=74&dpr=1%201x,%20https://www.lego.com/cdn/cs/set/assets/blt49a40456f71c9602/A2026_Quicklink_Small_V02.png?format=webply&fit=crop&quality=60&width=74&dpr=2%202x,%20https://www.lego.com/cdn/cs/set/assets/blt49a40456f71c9602/A2026_Quicklink_Small_V02.png?format=webply&fit=crop&quality=55&width=74&dpr=3%203x,%20https://www.lego.com/cdn/cs/set/assets/blt49a40456f71c9602/A2026_Quicklink_Small_V02.png?format=webply&fit=crop&quality=70&width=74&dpr=1.5%201.5x%22"
+                    alt=""></div>
+            <div class="grid-item"><img
+                    src="https://www.lego.com/cdn/cs/set/assets/blt0b3aedf4c1a73232/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Insiders.png?format=webply&fit=crop&quality=75&width=74&dpr=1%201x,%20https://www.lego.com/cdn/cs/set/assets/blt0b3aedf4c1a73232/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Insiders.png?format=webply&fit=crop&quality=60&width=74&dpr=2%202x,%20https://www.lego.com/cdn/cs/set/assets/blt0b3aedf4c1a73232/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Insiders.png?format=webply&fit=crop&quality=55&width=74&dpr=3%203x,%20https://www.lego.com/cdn/cs/set/assets/blt0b3aedf4c1a73232/Jan-Feb-DrivePeriod-Home-202401-Quicklink-Insiders.png?format=webply&fit=crop&quality=70&width=74&dpr=1.5%201.5x%22"
+                    alt=""></div>
+        </div>
+
+        <nav>
+            <div class="Text_Find">
+                <h2>Find the perfect set</h2>
+            </div>
+            <section class="carrusel_imgs">
+                <div class="carrusel_navegacion">
+                    <nav>
+                        <ul>
+                            <li>Featured Sets</li>
+                            <li>Popular</li>
+                            <li>F1® Cars</li>
+                        </ul>
+                    </nav>
+                    <div class="botones">
+                        <div class="border"><button class="uno"></button></div>
+                        <div class="border"><button class="dos"></button></div>
+                    </div>
+                </div>
+                <div class="carrousel">
+                    <div class="grid_carrousel">
+                        <div class="corazon">
+                            <button></button>
+                        </div>
+                        <article class="article">
+                            <div class="imagen">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/bltade30768c791af76/10343_Prod.png?fit=crop&quality=80&width=250&height=250&dpr=1"
+                                    alt="LEGO set">
+                            </div>
+                            <div class="puntuacion">
+                                <span class="span_one">
+                                    <div></div>
+                                    18+
+                                </span>
+                                <span class="span_two">
+                                    <div></div>
+                                    274
+                                </span>
+                                <span class="span_three">
+                                    <div></div>
+                                    5.0
+                                </span>
+                            </div>
+                            <a class="text_link" href=""><span class="text">Miniorquídea</span></a>
+
+                            <div class="price">
+                                $29.99
+                            </div>
+                            <div class="button">
+                                <button>
+                                    <div></div>
+                                    Añadir a la Bolsa
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="grid_carrousel">
+                        <div class="corazon">
+                            <button></button>
+                        </div>
+                        <article class="article">
+                            <div class="imagen">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/blt1bcb187351a12753/10342_WEB_PRI_NOBG.png?fit=crop&quality=80&width=250&height=250&dpr=1"
+                                    alt="LEGO set">
+                            </div>
+
+                            <div class="puntuacion">
+                                <span class="span_one">
+                                    <div></div>
+                                    18+
+                                </span>
+                                <span class="span_two">
+                                    <div></div>
+                                    749
+                                </span>
+                                <span class="span_three">
+                                    <div></div>
+                                    4.8
+                                </span>
+                            </div>
+                            <a class="text_link" href=""><span class="text">Bonito ramo de flores rosas</span></a>
+                            <div class="price">
+                                $59.99
+                            </div>
+                            <div class="button">
+                                <button>
+                                    <div></div>
+                                    Añadir a la Bolsa
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="grid_carrousel">
+                        <div class="corazon">
+                            <button></button>
+                        </div>
+                        <article class="article">
+                            <div class="imagen">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/blta6acd9882132e80e/31169_Prod_en-gb.png?fit=crop&quality=80&width=250&height=250&dpr=1"
+                                    alt="LEGO set">
+                            </div>
+                            <div class="puntuacion">
+                                <span class="span_one">
+                                    <div></div>
+                                    8+
+                                </span>
+                                <span class="span_two">
+                                    <div></div>
+                                    363
+                                </span>
+                                <span class="span_three">
+                                    <div></div>
+                                    4.8
+                                </span>
+                            </div>
+                            <a class="text_link" href=""><span class="text">Autobús de batalla</span></a>
+                            <div class="price">
+                                $29.99
+                            </div>
+                            <div class="button">
+                                <button>
+                                    <div></div>
+                                    Añadir a la Bolsa
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="grid_carrousel">
+                        <div class="corazon">
+                            <button></button>
+                        </div>
+                        <article class="article">
+                            <div class="imagen">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/blt53711dac56e01b36/10280_Prod.png?fit=crop&quality=80&width=250&height=250&dpr=1"
+                                    alt="LEGO set">
+                            </div>
+                            <div class="puntuacion">
+                                <span class="span_one">
+                                    <div></div>
+                                    18+
+                                </span>
+                                <span class="span_two">
+                                    <div></div>
+                                    756
+                                </span>
+                                <span class="span_three">
+                                    <div></div>
+                                    4.9
+                                </span>
+                            </div>
+                            <a class="text_link" href=""><span class="text">Ramo de Flores</span></a>
+
+                            <div class="price">
+                                $59.99
+                            </div>
+                            <div class="button">
+                                <button>
+                                    <div></div>
+                                    Añadir a la Bolsa
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="grid_carrousel">
+                        <div class="corazon">
+                            <button></button>
+                        </div>
+                        <article class="article">
+                            <div class="imagen">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/blt5186ea8ea23f07aa/10344_Prod.png?fit=crop&quality=80&width=250&height=250&dpr=1"
+                                    alt="LEGO set">
+                            </div>
+                            <div class="puntuacion">
+                                <span class="span_one">
+                                    18+
+                                </span>
+                                <span class="span_two">
+                                    325
+                                </span>
+                                <span class="span_three">
+                                    4.9
+                                </span>
+                            </div>
+                            <a class="text_link" href=""><span class="text">Miniorquídea</span></a>
+                            <div class="price">
+                                $29.99
+                            </div>
+                            <div class="button">
+                                <button>
+                                    Añadir a la Bolsa
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </nav>
+
+        <nav class="Gallery1">
+            <section>
+                <h2>Let's get building!</h2>
+                <div class="Gallery1-container">
+                    <div class="Gallery1-card">
+                        <img src="https://www.lego.com/cdn/cs/set/assets/blt57fd4bfe954bd7b0/01-CardContent-AdultsWelcome-ArticleAsset-Project-Fossil.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
+                            alt="Tyrannosaurus rex fossil">
+                        <h3>“We have a T. rex!”</h3>
+                        <p>Build the LEGO® Jurassic World Dinosaur Fossils: Tyrannosaurus rex set.</p>
+                        <a href="#">Shop now ></a>
+                    </div>
+
+                    <div class="Gallery1-card">
+                        <img src="https://www.lego.com/cdn/cs/set/assets/blta9b4ec8de0413c8a/1996-2025-Homepage-Content-Block-Standard-Racers-v2.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
+                            alt="LEGO F1 cars">
+                        <h3>Build your dream team</h3>
+                        <p>Assemble the complete grid with the LEGO® F1® lineup - every team for every racing fan.</p>
+                        <a href="#">Shop collection ></a>
+                    </div>
+
+                    <div class="Gallery1-card">
+                        <img src="https://www.lego.com/cdn/cs/set/assets/bltf1029b20d1f9ef54/Merch_Brick-40819-HT-202503-Block-Standard.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
+                            alt="LEGO Racing Driver Minifigure">
+                        <h3>Rev up excitement for racing fans</h3>
+                        <p>Off to the races with the new LEGO® Up-Scaled Racing Driver Minifigure.</p>
+                        <a href="#">Shop now ></a>
+                    </div>
+                </div>
+            </section>
+        </nav>
+
+        <nav class="elementoPar">
+            <section>
+                <h1>Spotlight on...</h1>
+                <div class="contenedor">
+                    <!-- Contenedor 1 (Pink) -->
+                    <div class="contenedor1">
+                        <h2>Be a LEGO® Insider</h2>
+                        <p>Access awesome rewards, discounts, communities, and more.</p>
+                        <button>Join now</button>
+                        <img src="C:\Users\yeferson\Downloads\sena\LEGO\Prueba\IMG\lego.jpg" alt="LEGO Insiders">
+                    </div>
+
+                    <!-- Contenedor 2 (Orange + Yellow) -->
+                    <div class="contenedor2">
+                        <div class="orange">
+                            <img src="C:\Users\yeferson\Downloads\sena\LEGO\Prueba\IMG\compras.jpg"
+                                alt="LEGO Gift Card">
+                            <div>
+                                <h2>Let them choose</h2>
+                                <p>A LEGO® gift card is always the perfect fit.</p>
+                                <button>Shop now</button>
+                            </div>
+                        </div>
+
+                        <div class="yellow">
+                            <div>
+                                <h2>Work as a team!</h2>
+                                <p>Build together with the LEGO® Builder app</p>
+                                <button>Learn more</button>
+                            </div>
+                            <img src="C:\Users\yeferson\Downloads\sena\LEGO\Prueba\IMG\compras.jpg" alt="LEGO Teamwork">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </nav>
+
+        <nav class="Gallery2">
+            <section>
+                <h2>Read All About It</h2>
+                <div class="Gallery2-container">
+                    <div class="Gallery2-card">
+                        <img src="https://www.lego.com/cdn/cs/set/assets/blt57fd4bfe954bd7b0/01-CardContent-AdultsWelcome-ArticleAsset-Project-Fossil.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
+                            alt="Tyrannosaurus rex fossil">
+                        <h3>How we made the Tyrannosaurus rex our most realistic fossil dinosaur set yet</h3>
+                        <p>We take you behind the scenes to showcase how we made the new dinosaur LEGO® set anatomically
+                            accurate.</p>
+                        <a href="#">Read more ></a>
+                    </div>
+
+                    <div class="Gallery2-card">
+                        <img src="https://www.lego.com/cdn/cs/set/assets/blt05fac97f016809d3/01-Hero-Standard-AdultsWelcome-ArticleAsset-Project-Toot-Mobile.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
+                            alt="LEGO Ideas River Steamboat">
+                        <h3>Everything you need to know about the LEGO® Ideas River Steamboat</h3>
+                        <p>Go behind the scenes of the LEGO® Ideas River Steamboat set...</p>
+                        <a href="#">Read more ></a>
+                    </div>
+
+                    <div class="Gallery2-card">
+                        <img src="https://www.lego.com/cdn/cs/set/assets/blt99fb90b284b62e55/Hero_-_Mobile.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
+                            alt="LEGO Botanicals Collection">
+                        <h3>The Best Artificial Plants from the LEGO® Botanicals Collection</h3>
+                        <p>Explore the LEGO® Botanicals collection...</p>
+                        <a href="#">Read more ></a>
+                    </div>
+
+                    <div class="Gallery2-card">
+                        <img src="https://www.lego.com/cdn/cs/set/assets/bltf13ba43e17c55e84/Hero_Banner_-_Mobile.jpg?fit=crop&format=webply&quality=80&width=635&height=440&dpr=1"
+                            alt="LEGO Gifts for Gamers">
+                        <h3>Best LEGO® Gifts for Gamers</h3>
+                        <p>From iconic video game characters...</p>
+                        <a href="#">Read more ></a>
+                    </div>
+                </div>
+            </section>
+        </nav>
+        <br>
+        <nav class="Sub_Main">
+            <p>Welcome to the Official LEGO® Shop, the amazing home of LEGO building toys, <a href="#">gifts</a>,
+                stunning display sets and more for <a href="#">kids</a> and adults alike.
+                Find the perfect gift for toddlers, kids, teens and adults for
+                <a href="#">birthdays</a> or other occasions such as <a href="#">Valentine's Day</a>,
+                <a href="#">Mother's Day</a> and <a href="#">Father's Day.</a>
+                We make it easy to shop for toys that will provide hours of fun and imaginative play.
+                You’ll also find curated <a href="#">LEGO sets for adults</a> perfectly matching
+                their <a href="#">interests</a>, such as <a href="#">cars</a>, <a href="#">flowers</a>, <a
+                    href="#">gaming</a> and much more!
+            </p>
+        </nav>
+
+    </main>
+
+    <br>
+
+    <footer>
+        <ul class="elemento">
+            <div class="Lista">
+                <img class="Logo1" src="IMG/Logo_Lego.png" alt="Logo de la compañia Lego">
+                <button class="country-btn">🌍 United States</button>
+                <a href="#">
+                    <li>Gift cards</li>
+                </a>
+                <a href="#">
+                    <li>Sitemap</li>
+                </a>
+                <a href="#">
+                    <li>Find inspiration</li>
+                </a>
+                <a href="#">
+                    <li>LEGO catalogues</li>
+                </a>
+                <a href="#">
+                    <li>Find a LEGO store</li>
+                </a>
+            </div>
+            <div class="Lista">
+                <h3>About Us</h3>
+                <a href="#">
+                    <li>About the LEGO Group</li>
+                </a>
+                <a href="#">
+                    <li>LEGO® news</li>
+                </a>
+                <a href="#">
+                    <li>Sustainability</li>
+                </a>
+                <a href="#">
+                    <li>Supply chain transparency statement</li>
+                </a>
+                <a href="#">
+                    <li>LEGO product certification</li>
+                </a>
+                <a href="#">
+                    <li>LEGO jobs</li>
+                </a>
+                <a href="#">
+                    <li>LEGO Compliance Line</li>
+                </a>
+            </div>
+            <div class="Lista">
+                <h3>Support</h3>
+                <a href="#">
+                    <li>Contact us</li>
+                </a>
+                <a href="#">
+                    <li>Find building instructions</li>
+                </a>
+                <a href="#">
+                    <li>Replacement parts</li>
+                </a>
+                <a href="#">
+                    <li>Deliveries and returns</li>
+                </a>
+                <a href="#">
+                    <li>Payment methods</li>
+                </a>
+                <a href="#">
+                    <li>Terms & conditions</li>
+                </a>
+                <a href="#">
+                    <li>Product recalls</li>
+                </a>
+            </div>
+            <div class="Lista">
+                <h3>Attractions</h3>
+                <a href="#">
+                    <li>LEGO® House</li>
+                </a>
+                <a href="#">
+                    <li>LEGOLAND® Parks</li>
+                </a>
+                <a href="#">
+                    <li>LEGOLAND Discovery Centers</li>
+                </a>
+            </div>
+            <div class="Lista">
+                <ul class="ul1">
+                    <h3>More From Us</h3>
+                    <a href="#">
+                        <li>LEGO® Magazine (FREE)</li>
+                    </a>
+                    <a href="#">
+                        <li>LEGO education</li>
+                    </a>
+                    <a href="#">
+                        <li>LEGO ideas</li>
+                    </a>
+                    <a href="#">
+                        <li>LEGO foundation</li>
+                    </a>
+                    <a href="#">
+                        <li>Affiliate program</li>
+                    </a>
+                    <a href="#">
+                        <li>Student & exclusive offers</li>
+                    </a>
+                    <a href="#">
+                        <li>LEGO braille bricks</li>
+                    </a>
+                </ul>
+            </div>
+        </ul>
+        <br>
+        <ul class="elemento2">
+            <p class="texto-suscripcion">Suscríbete al correo electrónico de LEGO® Shop</p>
+            <div class="suscripcion">
+
+                <input type="email" placeholder="Your Email Address">
+                <button> > </button>
+            </div>
+            <div class="Iconos_Redes">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/LEGO/"><Img src="IMG/Facebook_Logo_Negro.png"
+                        alt="Logo de Facebook"></Img></a>
+                <a href="https://twitter.com/LEGO_Group"><Img src="IMG/Twitter_Logo.png"
+                        alt="Logo de X(Twitter)"></Img></a>
+                <a href="https://www.instagram.com/lego"><Img src="IMG/Instagram_Logo_Negro.png"
+                        alt="Logo de Instagram"></Img></a>
+                <a href="https://m.youtube.com/user/LEGO"><Img src="IMG/Youtube_Logo_Negro.png"
+                        alt="Logo de Youtube"></Img></a>
+            </div>
+        </ul>
+        <br>
+        <div class="elemento3">
+            <a href="#">
+                <li>Privacy policy</li>
+            </a>
+            <a href="#">
+                <li>Cookies</li>
+            </a>
+            <a href="#">
+                <li>Legal notice</li>
+            </a>
+            <a href="#">
+                <li>Terms of use</li>
+            </a>
+            <a href="#">
+                <li>Digital wellbeing</li>
+            </a>
+            <a href="#">
+                <li>Accessibility</li>
+            </a>
+            <a href="#">
+                <li>Cookie Settings</li>
+            </a>
+            <a href="#">
+                <li>Do not sell/share my personal information</li>
+            </a>
+        </div>
+        <p>LEGO System A/S, DK-7190 Billund, Denmark. Must be 18 years or older to purchase online. LEGO, the LEGO
+            logo, the Minifigure, DUPLO, the FRIENDS logo, the MINIFIGURES logo, DREAMZzz, NINJAGO, VIDIYO and
+            MINDSTORMS are trademarks of the LEGO Group. ©2025 The LEGO Group. All rights reserved. Use of this site
+            signifies your agreement to the Terms of Use.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
