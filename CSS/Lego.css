@@ -243,7 +243,6 @@ body {
     cursor: pointer;
 }
 
-/* Sección principal */
 .seccion-principal {
     position: relative;
     width: 100%;
@@ -286,12 +285,7 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-.boton-primario {
-    background-color: white;
-    color: black;
-}
-
-.boton-secundario {
+.boton-primario, .boton-secundario {
     background-color: white;
     color: black;
 }
@@ -317,7 +311,7 @@ body {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 15px;
-    max-width: 1200px;
+    width: 100%;
     margin: auto;
     background-color: #e4e5ec;
 }
@@ -561,7 +555,7 @@ body {
 }
 
 .Gallery1-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.05);
 }
 
 .Gallery1-card a {
@@ -787,7 +781,7 @@ body {
 }
 
 .Gallery2-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.04);
 }
 
 .Gallery2-card h3 {
