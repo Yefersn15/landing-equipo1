@@ -16,11 +16,9 @@ window.addEventListener("scroll", function() {
     let currentScroll = window.scrollY;
 
     if (currentScroll > lastScrollTop) {
-        // Ocultar barra y encabezado al hacer scroll hacia abajo
         header.style.top = "-80px";
         barraAnuncios.style.top = "-80px";
     } else {
-        // Mostrar barra y encabezado al hacer scroll hacia arriba
         header.style.top = "27px";
         barraAnuncios.style.top = "0px";
     }

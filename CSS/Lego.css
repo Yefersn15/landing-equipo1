@@ -17,13 +17,14 @@
 html {
     width: 100%;
     min-height: 100vh;
-    font-size: 1rem; /* Ajuste base para escalabilidad */
+    font-size: 1rem;
     background-color: white;
     font-family: 'Cera Pro', sans-serif;
     padding-top: 80px;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
-
 
 body {
     display: flex;
@@ -31,8 +32,6 @@ body {
     align-items: center;
 }
 
-
-/* Barra de anuncios */
 .barra-anuncios {
     position: fixed;
     top: 0;
@@ -49,7 +48,7 @@ body {
 
 .encabezado {
     position: fixed;
-    top: 40px;
+    top: 26px;
     left: 0;
     width: 100%;
     background-color: #ffcf00;
@@ -62,14 +61,14 @@ body {
     transition: top 0.3s ease-in-out;
 }
 
+
 .logo {
-    height: 80px;
+    height: 60px;
     display: block;
-    height: 40px;
+    height: 60px;
     margin-right: 30px;
 }
 
-/* Menú de navegación */
 .menu-navegacion {
     display: flex;
     gap: 10px;
@@ -88,7 +87,6 @@ body {
     position: relative;
 }
 
-/* Enlaces principales */
 .menu-navegacion ul li a {
     text-decoration: none;
     color: black;
@@ -98,165 +96,23 @@ body {
     display: block;
 }
 
-/* Menú completo desplegable estilo LEGO */
-.menu-completo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    width: 45vw;
-    height: 100vh;
-    background: white;
-    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
-    padding: 30px 40px;
-    /* Espaciado interno */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    transform: translateX(-100%);
-    transition: transform 0.25s ease-out, opacity 0.25s ease;
-
-}
-
-/* Mostrar menú cuando está activo */
-.menu-completo.active {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-/* Botón de cerrar menú */
-.cerrar-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-/* Hacer que el encabezado existente se muestre dentro del menú */
-.menu-completo .encabezado {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Ajustes del logo dentro del menú */
-.menu-completo .logo {
-    height: 40px;
-    /* Tamaño del logo */
-}
-
-/* Ajustes del nav dentro del menú */
-.menu-completo .menu-navegacion {
-    display: flex;
-    gap: 20px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.menu-completo .menu-navegacion a {
-    text-decoration: none;
-    color: black;
-}
-
-.menu-completo .menu-navegacion a.active {
-    text-decoration: underline;
-}
-
-/* Contenedor del contenido del menú en forma de columna */
-#menu-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* Asegura que los elementos estén en columna */
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-/* Estilos de cada opción del menú */
-#menu-content li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 17px;
-    font-weight: 600;
-    /* Ajuste para parecerse más al menú de LEGO */
-    padding: 12px 0;
-    cursor: pointer;
-    border-bottom: 1px solid #ddd;
-    transition: background 0.2s;
-}
-
-#menu-content li:hover {
-    background: #f7f7f7;
-}
-
-#menu-header {
-    background-color: white;
-    /* Fondo blanco */
-    width: 100%;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    /* Línea separadora */
-}
-
-#menu-header .logo {
-    width: 120px;
-    /* Ajusta el tamaño del logo */
-    margin-bottom: 10px;
-}
-
-#menu-header .menu-navegacion ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-#menu-header .menu-navegacion ul li {
-    display: inline-block;
-}
-
-#menu-header .menu-navegacion a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    padding: 10px;
-    transition: color 0.3s ease-in-out;
-}
-
-#menu-header .menu-navegacion a:hover {
-    color: #f00;
-    /* Cambia de color al pasar el mouse */
-}
-
-/* Submenús */
 .menu-desplegable {
     overflow: hidden;
     display: none;
     position: absolute;
-    left: calc(100% + 10px);
-    top: 0;
+    left: 0;
+    top: 100%;
     background-color: white;
     width: 400px;
     padding: 20px;
     opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateX(10px);
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+    border-radius: 0;
     z-index: 1000;
+    pointer-events: none; 
 }
 
-/* Estilos de los elementos dentro del submenú */
+
 .menu-desplegable ul {
     list-style: none;
     padding: 0;
@@ -280,14 +136,63 @@ body {
     background-color: #f1f1f1;
 }
 
-/* Mostrar submenú con animación */
+
+.desplegable {
+    display: inline-block; 
+    padding: 5px 10px; 
+}
+
 .desplegable:hover .menu-desplegable {
     display: block;
     opacity: 1;
-    transform: translateX(0);
+    pointer-events: auto; 
 }
 
-/* Buscador e iconos */
+
+.menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-sets {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+}
+
+.menu-container:hover .menu-sets {
+    display: inline-flex;
+}
+
+.boton-sets {
+    text-transform: uppercase;
+    padding: 0.3125rem 1.25rem;
+    border-radius: 4px;
+    color: rgb(208, 2, 27);
+    background: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+
+.menu-sets ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-sets li a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu-sets li a:hover {
+    background: #f1f1f1;
+}
+
 .buscador {
     display: flex;
     align-items: center;
@@ -326,53 +231,15 @@ body {
 }
 
 .icono img {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     cursor: pointer;
 }
 
 .icono {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
-}
-
-.menu-sets {
-    display: none;
-    /* Oculto por defecto */
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    width: 200px;
-    top: 60px;
-    /* Ajusta según tu diseño */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-}
-
-.menu-sets ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-sets li {
-    padding: 10px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.menu-sets li a {
-    text-decoration: none;
-    color: black;
-}
-
-.menu-sets li:hover {
-    background-color: #f1f1f1;
 }
 
 /* Sección principal */
@@ -405,7 +272,6 @@ body {
 .contenido-principal p {
     font-size: 18px;
     margin: 15px 0;
-    line-height: 1.5;
 }
 
 .boton-primario,
@@ -435,13 +301,7 @@ body {
 }
 
 .grid-section {
-    background-color: #f7f7f7;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.grid-section {
-    background-color: #f7f7f7;
+    background-color: #E4E5EC;
     padding: 40px 20px;
     text-align: center;
 }
@@ -470,209 +330,122 @@ body {
     max-height: 100%;
 }
 
-.Text_Find {
-    height: 115.95px;
+.imagen_decorativa img {
+    width: 100%;
+}
+
+.texto-buscar {
     text-align: center;
-    font-family: sans-serif;
+    font-size: 19px;
     padding: 40px;
     background-color: white;
 }
 
-.carrusel_imgs {
-    height: 661.53px;
+.carrusel-imagenes {
     padding: 32px;
     background-color: white;
 }
 
-.carrusel_navegacion {
+.navegacion-carrusel {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    height: 57.23px;
+    height: 57px;
     background-color: white;
     overflow: hidden;
+    font-weight: bold;
 }
 
-.carrusel_navegacion>nav>ul {
+.navegacion-carrusel ul {
     display: flex;
     gap: 40px;
     margin: 8px;
-    font-size: 18.9472px;
+    font-size: 18px;
     color: #0009;
-    background-color: white;
-    width: 745px;
-    height: 41.23px;
     list-style: none;
 }
 
-.carrusel_navegacion>nav>ul>li {
-    padding: 0px 0px 8px;
-    text-decoration: none;
+.navegacion-carrusel li {
+    padding-bottom: 8px;
+    cursor: pointer;
 }
 
-.carrusel_navegacion>nav>ul>li:hover {
-    border-bottom: .25rem #0009 solid;
-    cursor: pointer;
+.navegacion-carrusel li:hover {
+    border-bottom: 3px solid #0009;
 }
 
 .botones {
     display: flex;
-    gap: .75rem;
+    gap: 12px;
 }
 
-.border {
-    border: .125rem #0009 solid;
-    border-radius: 62.4375rem;
-    width: 2.5rem;
-    height: 2.5rem;
+.boton {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0009;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #0009;
+}
+
+.carrusel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 24px;
+}
+
+.producto {
+    background-color: white;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #0000000f;
+}
+
+.producto img {
+    width: 230px;
+    height: 220px;
+}
+
+.corazon {
+    display: flex;
+    width: 100%;
+    padding: 8px;
+}
+
+.corazon button {
+    width: 36px;
+    height: 36px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.border>button {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: #141414;
-    border-radius: 62.4375rem;
-    mask-size: 23px;
-    mask-position: center;
-}
-
-.border:hover {
-    background-color: #0009;
-    border: none;
-}
-
-.border>button:hover {
-    background-color: white;
-    cursor: pointer;
-}
-
-.uno {
-    mask: url(https://assets.lego.com/icons/v7.3.0/chevron-left-solid.svg) no-repeat;
-}
-
-.dos {
-    mask: url(https://assets.lego.com/icons/v7.3.0/chevron-right-solid.svg) no-repeat;
-}
-
-.carrousel {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 1.25rem;
-    width: 100%;
-    height: 528.33px;
-    padding-top: 2px;
-    padding-bottom: 24px;
-}
-
-.grid_carrousel {
-    background-color: white;
-    padding-top: 8px;
-    padding-right: 8px;
-    padding-left: 8px;
-    display: flex;
-    flex-direction: column;
-    color: #141414;
-    width: 275px;
-    border: 1px #0000000f solid;
-}
-
-.article {
-    padding-bottom: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: .75rem;
-    color: #141414;
-}
-
-.corazon {
-    width: 231.24px;
-    height: 40px;
-    padding-bottom: 2px;
-}
-
-.corazon>button {
-    background-image: url(https://assets.lego.com/icons/v7.3.0/heart.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1.125rem;
-    background-color: #f2f2f2;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    border: none;
-}
-
-.imagen {
-    padding-bottom: 8px;
-    width: 245.94px;
-    height: 237.94px;
-    text-align: center;
-}
-
-.imagen>img {
-    width: 229.79px;
-    height: 221.79px;
+.corazon button img {
+    width: 18px;
+    height: 18px;
 }
 
 .puntuacion {
-    width: 99.69px;
-    height: 21px;
     display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.puntuacion>span {
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.span_one {
-    margin-right: 12px;
-    gap: .25rem;
-    display: flex;
-    width: 43.46px;
-    height: 21px;
-}
-
-.span_one>div {
-    background-image: url(https://assets.lego.com/icons/v7.3.0/birthday-cake.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1.125rem;
-    width: 18px;
-    height: 18px;
-}
-
-.span_two {
-    margin-right: 12px;
-    gap: .25rem;
-    display: flex;
-    width: 43.23px;
-    height: 21px;
-}
-
-.span_two>div {
-    background-image: url(https://assets.lego.com/icons/v7.3.0/brick-one-by-one-iso.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1.125rem;
-    width: 18px;
-    height: 18px;
-}
-
-.span_three {
-    display: flex;
-    width: 42.36px;
-    height: 21px;
-}
-
-.span_three>div {
-    mask: url(https://assets.lego.com/icons/v7.3.0/star-solid.svg) no-repeat;
-    mask-size: 1.125rem;
-    background-color: #fac400;
+.puntuacion img {
     width: 18px;
     height: 18px;
 }
@@ -681,49 +454,36 @@ body {
     text-decoration: none;
     color: #141414;
     font-size: 16px;
+    font-weight: bold;
+    margin: 8px 0;
 }
 
-.text_link>span:hover {
+.text_link span:hover {
     border-bottom: 2px solid;
 }
 
-.price {
+.precio {
     font-size: 16px;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
-.text_link,
-.price {
-    width: 269.55px;
-    height: 24px;
-}
-
-.button {
-    width: 269.55px;
+.boton-comprar {
+    width: 188px;
     height: 44px;
-}
-
-.button>button {
-    width: 188.09px;
-    height: 44px;
-    padding-right: 16px;
     background-color: #F47D20;
     font-size: 16px;
     font-weight: 700;
-    gap: .75rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 62.4375rem;
+    border-radius: 50px;
     border: none;
     color: #000;
+    gap: 10px;
+    cursor: pointer;
 }
 
-.button>button>div {
-    background-image: url(https://assets.lego.com/icons/v7.3.0/shopping-bag.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1.125rem;
+.boton-comprar img {
     width: 18px;
     height: 18px;
 }
@@ -739,14 +499,19 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
+}
+
+.Gallery1 h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
 .Gallery1-card {
     display: flex;
     flex-direction: column;
     background: white;
-    width: 250px;
+    width: 520px;
     text-align: center;
     border-radius: 10px;
     padding: 20px;
@@ -774,54 +539,118 @@ body {
     border-radius: 10px;
 }
 
+.racers {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('https://www.lego.com/cdn/cs/set/assets/blt9ebb0020d65e1fe0/1993-2025-Homepage-Hero-XL-Racers-Large-v3.jpg?fit=crop&format=jpg&quality=80&width=1600&height=1000&dpr=1') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 40px;
+    margin-top: 100px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bottones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bottones button {
+    padding: 10px 20px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.bottones button:hover {
+    background: black;
+    color: white;
+}
+
+.LogoF {
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: auto;
+}
 
 .elementoPar {
     display: flex;
-    background-color: #E8E9EC;
+    background-color: #e4e5ec;
     justify-content: center;
     padding: 30px;
+    margin-top: -5px;
+}
+
+.elementoPar h1 {
+    font-size: 31px;
+    margin-bottom: 10px;
 }
 
 .contenedor {
     display: flex;
-    max-width: 1200px;
+    width: 100%;
     margin: auto;
     gap: 20px;
 }
 
-/* Contenedor 1: Pink */
+/* Pink */
 .contenedor1 {
-    width: 50%;
-    background-color: #ffc0cb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
+    width: 55%;
+    background-color: #f6accd;
 }
 
 .contenedor1 img {
     width: 100%;
-    height: auto;
+    height: 73%;
+    margin-top: 10px;
 }
 
-.contenedor1 h2,
-.contenedor1 p,
-.contenedor1 button {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+.contenedor1>div {
     text-align: center;
     color: black;
-    background: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    border-radius: 5px;
-    width: 80%;
+    background: #f6accd;
+    width: 100%;
+    padding: 2.55rem 1.25rem;
 }
 
-/* Contenedor 2 (Orange + Yellow) */
+.contenedor1 h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.contenedor1 p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/*Orange + Yellow*/
 .contenedor2 {
     width: 50%;
     display: flex;
@@ -829,36 +658,49 @@ body {
     gap: 20px;
 }
 
+.contenedor2 h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.contenedor2 p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
 .orange,
 .yellow {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 10px;
     overflow: hidden;
-    padding: 20px;
 }
 
 .orange {
-    background-color: #f89c5a;
+    background-color: #FA994D;
+    height: 50%;
 }
 
 .yellow {
     background-color: #fdd835;
+    height: 50%;
 }
 
-.orange img,
-.yellow img {
+.divparaimagen {
     width: 50%;
-    height: auto;
-    object-fit: cover;
+    padding: 0;
 }
 
 .orange div,
 .yellow div {
+    display: flex;
+    flex-direction: column;
     width: 50%;
+    height: 100%;
     padding: 20px;
     text-align: left;
+    align-items: center;
+    justify-content: center;
 }
 
 .contenedor button {
@@ -871,25 +713,31 @@ body {
     margin-top: 10px;
 }
 
+
 .Gallery2 {
     display: flex;
-    background-color: #E8E9EC;
+    background-color: #e4e5ec;
     justify-content: center;
     padding: 30px;
+}
+
+.Gallery2 h2 {
+    font-size: 31px;
+    margin-bottom: 10px;
 }
 
 .Gallery2-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
 }
 
 .Gallery2-card {
     display: flex;
     flex-direction: column;
-    background-color: #E8E9EC;
-    width: 250px;
+    background-color: #e4e5ec;
+    width: 350px;
     text-align: center;
     border-radius: 10px;
     padding: 10px;
@@ -898,6 +746,17 @@ body {
 
 .Gallery2-card:hover {
     transform: translateY(-5px);
+}
+
+.Gallery2-card h3 {
+    margin-top: 20px;
+    line-height: 31px;
+}
+
+.Gallery2-card p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 19px;
 }
 
 .Gallery2-card a {
@@ -914,16 +773,14 @@ body {
 
 .Gallery2-card img {
     width: 100%;
-    border-radius: 10px;
 }
 
 .Sub_Main {
     justify-content: center;
     display: flex;
-    background-color: #E8E9EC;
+    background-color: #e4e5ec;
     padding: 20px;
     width: 100%;
-
 }
 
 .Sub_Main a {
@@ -937,61 +794,68 @@ body {
 
 footer {
     color: white;
-    background-color: #201d48;
+    background-color: #201D48;
     font-family: "Cera Pro", sans-serif;
     width: 100%;
     padding: 60px 40px;
-    /* Aumenté el padding */
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    line-height: 24px;
     gap: 0px;
-    /* Espacio grande entre las secciones del footer */
+    
 }
 
 footer p {
-    font-size: 12px;
-    margin-top: -23px;
-    margin-left: 105px;
-    margin-top: 1px;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 12px;  /* Tamaño base */
+    margin-left: 60px; 
+    margin-top: 5px;   
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 .Logo1 {
-    width: 190px;
-    height: 190px;
-    margin-left: -97px;
-    margin-top: -70px;
-
+    width: 120px;
+    height: auto;
+    margin-left: 57px;
+    margin-bottom: 20px;
+    
 }
 
 .elemento {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     list-style: none;
-    gap: 50px;
-    /* Aumenté el espacio entre columnas */
+    gap: 120px;
     width: 100%;
-    max-width: 1200px;
 }
 
-.elemento li {
-    margin-left: -50px;
-    margin-top: 10px;
-}
 
 .country-btn {
-    margin-left: -147px;
+    margin-left: -110px;
+    margin-bottom: 30px;
+    border: none;
     height: 40px;
     color: white;
     background-color: #18152D;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .elemento a {
-    color: white;
-    text-decoration: none;
     display: block;
     margin-bottom: 30px;
-    /* Espaciado entre enlaces */
+   
     font-size: 16px;
 }
 
@@ -1000,21 +864,43 @@ footer p {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
     padding: 40px 0;
-    /* Aumenté el espacio superior e inferior */
+    
 }
 
-.elemento2 ul {
-    margin-top: px;
+.texto-suscripcion {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    display: block;
+    margin-bottom: 100px;
 }
 
-.elemento2 button {
-    background-color: RGB(233, 111, 20);
-    padding: 12px 24px;
-    border-radius: 5px;
+.suscripcion {
+    display: flex;
+    align-items: center;
+    color: gray;
+    background-color: white;
+
+    width: 250px;
+    height: 55px;
+    overflow: hidden;
+    position: absolute; 
+    right: 77.8%; 
+    max-width: 100%; 
+ 
+}
+
+.suscripcion input {
+    flex: 1;
     border: none;
-    cursor: pointer;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #555;
+    outline: none;
+    background: none;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .suscripcion button {
@@ -1027,109 +913,48 @@ footer p {
     justify-content: center;
     width: 50px;
     height: 100px;
-    color: white;
-    font-size: 18px;
-}
-
-
-.texto-suscripcion {
-    margin-left: -50px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 20px;
-    display: block;
-    display: block;
-    font-size: 18px;
-    margin-bottom: 100px;
-}
-
-.suscripcion {
-    display: flex;
-    align-items: center;
-    color: gray;
-    background-color: white;
-    border-radius: 1px;
-    width: 250px;
-    /* Ajusta según el diseño de LEGO */
-    height: 48px;
-    border: 3px solid #ccc;
-    overflow: hidden;
-    /* Evita que los elementos internos se desborden */
-    position: relative;
-    left: -583px;
-    /* Mueve la caja más a la izquierda */
-}
-
-.suscripcion input {
-    flex: 1;
-    border: none;
-    padding: 10px 12px;
-    font-size: 16px;
-    color: #555;
-    outline: none;
-    background: none;
-    min-width: 0;
-    overflow: hidden;
-}
-
-.Lista h3 {
-    font-size: 16px;
-}
-
-.ul1 {
-    margin-left: 40px;
-    list-style: none;
-}
-
-.Iconos_Redes {
-    display: flex;
-    gap: 25px;
-    /* Espacio más grande entre los íconos */
+    color: #141414;
+    font-size: 30px;
 }
 
 .Iconos_Redes img {
     border-radius: 100%;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    /* Tamaño ajustado */
+    height: 48px;
 }
 
 .elemento3 {
     text-align: center;
-    display: flex;
-    justify-content: flex-start;
+    display: inline-flex;
     list-style: none;
     width: 100%;
-    gap: 50px;
-    /* Mucho más espacio entre elementos */
-    padding: 30px 0;
-    padding-left: 105px;
-    margin-top: -50px;
+    gap: 20px;
+    padding: 40px 20px 20px;
+    min-height: 84px;
 }
-
-.elemento3 a {
-    color: white;
-    text-decoration: none;
-}
-
 
 .elemento h3 {
     margin-bottom: 40px;
-    /* Espaciado entre título y enlaces */
     font-size: 16px;
     font-size: 16px;
-    margin-left: -50px;
+}
 
+.elemento3 p {
+    font-size: 12px;
+    line-height: 18px;
 }
 
 .elemento3 li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 40px;
     font-size: 12px;
-    margin-top: 0px;
-    gap: 10px;
-
 }
 
-.Iconos_Redes h3 {
-    margin-top: -45px;
-    margin-right: -110px;
+.Lista1 li{
+    display: flex;
+    padding-left: 70px;
+    
 }
