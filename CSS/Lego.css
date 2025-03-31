@@ -376,22 +376,44 @@ body {
 
 .botones {
     display: flex;
-    gap: 12px;
+    gap: .75rem;
 }
 
-.boton {
-    width: 40px;
-    height: 40px;
+.border {
+    border: .125rem #0009 solid;
+    border-radius: 62.4375rem;
+    width: 2.5rem;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #0009;
-    border-radius: 50%;
+}
+
+.border>button {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #141414;
+    border-radius: 62.4375rem;
+    mask-size: 23px;
+    mask-position: center;
+}
+
+.border:hover {
+    background-color: #0009;
+    border: none;
+}
+
+.border>button:hover {
+    background-color: white;
     cursor: pointer;
 }
 
-.boton:hover {
-    background-color: #0009;
+.uno {
+    mask: url(https://assets.lego.com/icons/v7.3.0/chevron-left-solid.svg) no-repeat;
+}
+
+.dos {
+    mask: url(https://assets.lego.com/icons/v7.3.0/chevron-right-solid.svg) no-repeat;
 }
 
 .carrusel {
@@ -400,6 +422,7 @@ body {
     gap: 20px;
     width: 100%;
     padding-bottom: 24px;
+    line-height: 40px;
 }
 
 .producto {
@@ -407,7 +430,6 @@ body {
     padding: 8px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     border: 1px solid #0000000f;
 }
 
@@ -525,7 +547,7 @@ body {
 .Gallery1-card a {
     display: inline-block;
     margin-top: 10px;
-    color: #0078d4;
+    color: black;
     text-decoration: none;
     font-weight: bold;
 }
@@ -762,7 +784,7 @@ body {
 .Gallery2-card a {
     display: inline-block;
     margin-top: 10px;
-    color: #0078d4;
+    color: black;
     text-decoration: none;
     font-weight: bold;
 }
