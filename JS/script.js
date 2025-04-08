@@ -11,16 +11,17 @@ function toggleBuscador() {
 let lastScrollTop = 0;
 let header = document.querySelector(".encabezado");
 let barraAnuncios = document.querySelector(".barra-anuncios");
+let producto = document.querySelector(".Producto");
 
 window.addEventListener("scroll", function() {
     let currentScroll = window.scrollY;
 
     if (currentScroll > lastScrollTop) {
-        header.style.top = "-80px";
         barraAnuncios.style.top = "-80px";
+        header.style.top = "-80px";
     } else {
-        header.style.top = "27px";
         barraAnuncios.style.top = "0px";
+        header.style.top = "27px";
     }
     lastScrollTop = currentScroll;
 });

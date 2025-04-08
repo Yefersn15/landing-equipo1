@@ -15,21 +15,24 @@
 }
 
 html {
-    width: 100%;
-    min-height: 100vh;
-    font-size: 1rem;
+    height: 100%;
+    font-size: 16px;
     background-color: white;
-    font-family: 'Cera Pro', sans-serif;
-    padding-top: 80px;
     overflow-x: hidden;
-    margin: 0;
-    padding: 0;
+}
+
+header {
+    width: hidden;
+    height: 90px;
 }
 
 body {
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: hidden;
 }
 
 .barra-anuncios {
@@ -109,7 +112,7 @@ body {
     transition: opacity 0.3s ease;
     border-radius: 0;
     z-index: 1000;
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 
@@ -138,14 +141,14 @@ body {
 
 
 .desplegable {
-    display: inline-block; 
-    padding: 5px 10px; 
+    display: inline-block;
+    padding: 5px 10px;
 }
 
 .desplegable:hover .menu-desplegable {
     display: block;
     opacity: 1;
-    pointer-events: auto; 
+    pointer-events: auto;
 }
 
 
@@ -285,7 +288,8 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-.boton-primario, .boton-secundario {
+.boton-primario,
+.boton-secundario {
     background-color: white;
     color: black;
 }
@@ -301,7 +305,7 @@ body {
     text-align: center;
 }
 
-.gris{
+.gris {
     background-color: #e4e5ec;
     margin-top: -5px;
     padding-top: 25px;
@@ -330,7 +334,11 @@ body {
     max-height: 100%;
 }
 
-.abajo{
+.grid-item img:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.abajo {
     padding-top: 10px;
     display: flex;
     justify-content: center;
@@ -340,7 +348,7 @@ body {
     text-decoration: none;
 }
 
-.abajoline:hover{
+.abajoline:hover {
     border-bottom: 1px solid #141414;
 }
 
@@ -403,7 +411,7 @@ body {
     justify-content: center;
 }
 
-.border>button {
+.border button {
     width: 2.5rem;
     height: 2.5rem;
     background-color: #141414;
@@ -417,7 +425,7 @@ body {
     border: none;
 }
 
-.border>button:hover {
+.border button:hover {
     background-color: white;
     cursor: pointer;
 }
@@ -432,24 +440,41 @@ body {
 
 .carrusel {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% / 5);
+    gap: 5px;
     width: 100%;
+    height: 500px;
     padding-bottom: 24px;
     line-height: 40px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.carrusel * {
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .producto {
     background-color: white;
     padding: 8px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    border: 1px solid #0000000f;
+    position: center;
+    border: 1px solid #dadada;
 }
 
 .producto img {
-    width: 230px;
-    height: 220px;
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
 }
 
 .corazon {
@@ -517,6 +542,7 @@ body {
     color: #000;
     gap: 10px;
     cursor: pointer;
+    margin: 0 auto;
 }
 
 .boton-comprar img {
@@ -840,12 +866,13 @@ footer {
     align-items: center;
     line-height: 24px;
     gap: 0px;
-    
+
 }
 
 footer p {
-    font-size: 12px;  /* Tamaño base */
-    margin-top: 5px;   
+    font-size: 12px;
+    /* Tamaño base */
+    margin-top: 5px;
 }
 
 footer a {
@@ -862,7 +889,7 @@ footer a:hover {
     height: auto;
     margin-left: 57px;
     margin-bottom: 20px;
-    
+
 }
 
 .elemento {
@@ -888,7 +915,7 @@ footer a:hover {
 .elemento a {
     display: block;
     margin-bottom: 30px;
-   
+
     font-size: 16px;
 }
 
@@ -898,7 +925,7 @@ footer a:hover {
     align-items: center;
     width: 100%;
     padding: 40px 0;
-    
+
 }
 
 .texto-suscripcion {
@@ -917,9 +944,9 @@ footer a:hover {
     width: 250px;
     height: 55px;
     overflow: hidden;
-    position: absolute; 
-    max-width: 100%; 
- 
+    position: absolute;
+    max-width: 100%;
+
 }
 
 .suscripcion input {
@@ -981,7 +1008,7 @@ footer a:hover {
     font-size: 12px;
 }
 
-.Lista1 li{
+.Lista1 li {
     display: flex;
     padding-left: 70px;
 }
