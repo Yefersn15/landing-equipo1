@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimus Prime</title>
+    <link rel="stylesheet" href="CSS/Lego.css">
+    <link rel="icon" type="image/png" href="IMG/legoicon.png?v=2">
+</head>
+
+<body>
+    <header>
+
+        <div class="barra-anuncios">
+            <p>Explora las últimas novedades y ofertas exclusivas</p>
+        </div>
+
+        <div class="encabezado">
+            <img class="logo" src="IMG/legoicon.png" alt="Logo LEGO">
+            <nav class="menu-navegacion">
+                <ul>
+                    <li class="desplegable">
+                        <a href="#">Compra</a>
+                        <ul class="menu-desplegable">
+                            <li><a href="#">Sets por tema</a></li>
+                            <li><a href="#">Edad</a></li>
+                            <li><a href="#">Rangos de precios</a></li>
+                            <li><a href="#">Comprar para ocasiones</a></li>
+                            <li><a href="#">Merchandising LEGO®</a></li>
+                            <li><a href="#">Decoración LEGO®</a></li>
+                            <li><a href="#">Intereses</a></li>
+                            <li><a href="#">Piezas y bloques</a></li>
+                            <li><a href="#">Exclusivos</a></li>
+                            <li><a href="#">Novedades</a></li>
+                            <li><a href="#">Más vendidos</a></li>
+                            <li><a href="#">Ofertas y descuentos</a></li>
+                            <li><a href="#">Tarjetas de regalo</a></li>
+                            <li><a href="#">Próximamente</a></li>
+                            <li><a href="#">Próximos a retirarse</a></li>
+                        </ul>
+                    </li>
+                    <li class="desplegable">
+                        <a href="#">Descubrir</a>
+                        <ul class="menu-desplegable">
+                            <li><a href="#">Nuestros valores</a></li>
+                            <li><a href="#">Nuestras apps</a></li>
+                            <li><a href="#">Nuestras revistas</a></li>
+                            <li><a href="#">Transmisiones en vivo</a></li>
+                            <li><a href="#">Todos los temas LEGO®</a></li>
+                            <li><a href="#">Todos los intereses LEGO®</a></li>
+                            <li><a href="#">Encuentra inspiración</a></li>
+                            <li><a href="#">Bienvenidos adultos</a></li>
+                            <li><a href="#">Para familias</a></li>
+                            <li><a href="#">Preescolar</a></li>
+                            <li><a href="#">LEGO® Fortnite®</a></li>
+                            <li><a href="#">LEGO® Insiders</a></li>
+                            <li><a href="#">LEGO® Mosaic Maker</a></li>
+                            <li><a href="#">Ideas para regalos LEGO®</a></li>
+                        </ul>
+                    </li>
+                    <li class="desplegable">
+                        <a href="#">Ayuda</a>
+                        <ul class="menu-desplegable">
+                            <li><a href="#">Estado de mi pedido</a></li>
+                            <li><a href="#">Envíos y devoluciones</a></li>
+                            <li><a href="#">Encuentra una tienda LEGO</a></li>
+                            <li><a href="#">Encuentra instrucciones de construcción</a></li>
+                            <li><a href="#">Preguntas frecuentes</a></li>
+                            <li><a href="#">Contáctanos</a></li>
+                            <li><a href="#">Piezas de repuesto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="menu-container">
+                    <button class="boton-sets">Todos los sets</button>
+                    <div class="menu-sets">
+                        <ul>
+                            <li><a href="#">Set 1</a></li>
+                            <li><a href="#">Set 2</a></li>
+                            <li><a href="#">Set 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="buscador" id="buscador">
+                <input type="text" placeholder="Buscar...">
+                <button onclick="toggleBuscador()">
+                    <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Buscar">
+                </button>
+            </div>
+
+            <div class="iconos-navegacion">
+                <a href="#" class="icono">
+                    <img src="IMG/corazon.png" alt="Favoritos">
+                </a>
+                <a href="#" class="icono">
+                    <img src="IMG/bolsa-de-la-compra.png" alt="Carrito de compras">
+                </a>
+            </div>
+        </div>
+
+        <div class="producto-top">
+            <ul class="miga-de-pan">
+                <li><a href=".../index.html">Inicio</a></li>
+                <li>›</li>
+                <li><a href="#">BrickHeadz</a></li>
+                <li>›</li>
+                <li>Optimus Prime: Robot y Vehículo</li>
+            </ul>
+        </div>
+    </header>
+
+    <hr>
+
+    <main>
+        <div class="contenedor">
+            <div class="diseño-producto">
+                <!-- Galería de Imágenes -->
+                <div class="galeria-producto">
+                    <div class="miniaturas">
+                        <div class="miniatura activa">
+                            <img src="https://www.lego.com/cdn/cs/set/assets/blta30e6d80da043f53/40803_Prod.png"
+                                alt="Vista frontal Castillo Disney">
+                        </div>
+                        <div class="miniatura">
+                            <img src="https://www.lego.com/cdn/cs/set/assets/bltbd1aeb644f5c988b/40803_boxprod_v39.png"
+                                alt="Caja Castillo Disney">
+                        </div>
+                        <div class="miniatura">
+                            <video
+                                src="https://www.lego.com/cdn/cs/set/assets/blte6550465238465b8/40803_360_SoMe.mp4#t=0.01">
+                        </div>
+                        <div class="miniatura">
+                            <img src="https://www.lego.com/cdn/cs/set/assets/blt02f5aaaa062a296d/40803_WEB_SEC02_NOBG.png"
+                                alt="Vista alternativa Mario Kart">
+                        </div>
+                        <div class="miniatura">
+                            <img src="https://www.lego.com/cdn/cs/set/assets/blt40954d359dc7d8ba/40803_WEB_SEC03_NOBG.png"
+                                alt="Características Mario Kart">
+                        </div>
+                        <div class="miniatura">
+                            <img src="https://www.lego.com/cdn/cs/set/assets/bltfea7e77aabeb87f4/40803_Lifestyle_Envr.jpg"
+                                alt="Características Mario Kart">
+                        </div>
+                        <div class="miniatura">
+                            <img src="https://www.lego.com/cdn/cs/set/assets/blt271e5f7bf7eb8d2c/40803_Lifestyle_Envr_1.jpg"
+                                alt="Características Mario Kart">
+                        </div>
+                        <div class="miniatura">
+                            <img src="https://www.lego.com/cdn/cs/set/assets/bltdf6d415c5ae9b278/40803_Box5_v39.png"
+                                alt="Características Mario Kart">
+                        </div>
+                       
+                    </div>
+
+                    <div class="imagen-principal">
+                        <img src="https://www.lego.com/cdn/cs/set/assets/blta30e6d80da043f53/40803_Prod.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1"
+                            alt="LEGO Mario Kart">
+                    </div>
+
+                    <button class="boton-ver-todo">
+                        <span class="icono"><img src="IMG/layout-grid-fill.svg" alt="galeria de imagenes"></span>
+                        Ver todo
+                    </button>
+                </div>
+
+                <!-- Detalles del Producto -->
+                <div class="detalles-producto">
+                    <div class="cabecera-producto">
+                        <div class="insignias-producto">
+                            <span>Nuevo</span>
+                            <span>Exclusivo</span>
+                        </div>
+
+                        <div class="contenedor-titulo-producto">
+                            <h1 class="titulo-producto">Optimus Prime: Robot y Vehículo</h1>
+                            <img src="https://www.lego.com/cdn/cs/set/assets/blt117f545a76e30723/brickheadz_logo_pos_300w.png?format=png&height=40&dpr=1"
+                                alt="Logo Disney™" class="logo-producto">
+                        </div>
+
+                        <div class="info-precio-producto">
+                            <p class="precio">$19.99</p>
+                            <p class="info-envio">Disponible ahora</p>
+                        </div>
+                    </div>
+
+
+                    <details class="regalo-con-compra">
+                        <summary>
+                            <span class="icono-regalo"><img src="../IMG/gift-line.svg" alt=""></span>
+                            <span>Regalos con Compra (1)</span>
+                            <span class="icono-flecha">▼</span>
+                        </summary>
+                        <div class="contenido-regalo">
+                            <div class="detalles-regalo">
+                                <img src="https://www.lego.com/cdn/cs/set/assets/blt7fb1bfca0a9d6dfa/40596_Prod_Standard_v2.png"
+                                    alt="Sorpresa Conejo de Pascua" class="imagen-regalo">
+                                <div class="texto-regalo">
+                                    <p class="etiqueta-regalo">Regalo con Compra</p>
+                                    <h3 class="titulo-regalo">Sorpresa Conejo de Pascua</h3>
+                                    <p class="descripcion-regalo">Con compras de $75 o más, incluidos los pedidos
+                                        anticipados. Hasta agotar existencias.*</p>
+                                </div>
+                            </div>
+                            <p class="expiracion-regalo">Finaliza el 2/4/25</p>
+                            <div class="acciones-regalo">
+                                <a href="#" class="enlace-terminos">Términos y Condiciones</a>
+                                <button class="boton-detalles">Detalles de la oferta</button>
+                            </div>
+                        </div>
+                    </details>
+
+                    <div class="selector-cantidad">
+                        <div class="controles-cantidad">
+                            <button class="boton-cantidad disminuir">−</button>
+                            <input type="number" value="1" min="1" max="3" class="entrada-cantidad">
+                            <button class="boton-cantidad aumentar">+</button>
+                        </div>
+                        <span class="texto-limite">Límite 3</span>
+                        <span class="icono-info">ⓘ</span>
+                    </div>
+
+                    <div class="botones-accion">
+                        <button class="boton-preorden">
+                            <img src="../IMG/bolsa-de-la-compra.png" alt="">
+                            Pre-ordenar
+                        </button>
+                        <button class="boton-lista-deseos">
+                            <span>♡</span>
+                        </button>
+                    </div>
+
+                    <div class="banner-vip">
+                        <img src="https://www.lego.com/cdn/cs/set/assets/blt45b9f723fde424bf/2118-LOTR-campaign-PDP-Promo-Badge.png?fit=bounds&format=png&width=60&height=60&dpr=1" alt="LEGO LOTR" />
+                        <div>
+                            <p>Puntos de lealtad dobles en sets seleccionados de LEGO® Lord of the Rings™</p>
+                            <a href="#">Compra ahora</a>
+                        </div>
+                    </div>                    
+
+                    <div class="info-adicional">
+                        <div class="item-info">
+                            <div class="icono-info-item"><img src="../IMG/map-pin-line.svg" alt=""></div>
+                            <span class="texto-info">Comprobar Stock Tienda</span>
+                            <span class="flecha-derecha">›</span>
+                        </div>
+                        <div class="item-info">
+                            <div class="icono-info-item"><img src="../IMG/truck-line.svg" alt=""></div>
+                            <span class="texto-info">Entregas y Devoluciones</span>
+                            <span class="flecha-derecha">›</span>
+                        </div>
+                        <div class="item-info">
+                            <div class="icono-info-item"><img src="../IMG/article-line.svg" alt=""></div>
+                            <span class="texto-info">Instrucciones de Construcción</span>
+                            <span class="flecha-derecha">›</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="estadisticas-producto">
+                <div class="item-estadistica">
+                    <img src="https://assets.lego.com/icons/v7.3.0/birthday-cake.svg" alt="">
+                    <h3>10+</h3>
+                    <p>Edad</p>
+                </div>
+                <div class="item-estadistica">
+                    <img src="https://assets.lego.com/icons/v7.3.0/brick-one-by-one-iso.svg" alt="">
+                    <h3>237</h3>
+                    <p>Piezas</p>
+                </div>
+                <div class="item-estadistica">
+                    <img src="../IMG/record-circle-line.svg" alt="">
+                    <h3>150</h3>
+                    <p>Puntos LEGO® Insiders</p>
+                </div>
+                <div class="item-estadistica">
+                    <img src="../IMG/hashtag.svg" alt="">
+                    <h3>40803</h3>
+                    <p>Artículo</p>
+                </div>
+               
+            </div>
+        </div>
+
+       
+        <details class="Contenido-Desplegable">
+            <summary>Especificaciones</summary>
+            <div class="especificaciones-contenido">
+                <div class="especificaciones-texto">
+                    <p>Este par de figuras coleccionables BrickHeadz™ es un regalo divertido para peques mayores de 10 años fans de los juguetes, películas y dibujos animados de Transformers. La figura robot de Optimus Prime construida con ladrillos y la versión de camión de juguete tienen un montón de detalles. El vehículo tiene ruedas giratorias y puede desmontarse de la base para dar rienda suelta a la imaginación. Cada figura de vivos colores se asienta en una base resistente, lo que hace que el set LEGO® BrickHeadz Optimus Prime: Robot y Vehículo (40803) sea perfecto para jugar y exponer.</p>
+
+                    <p>Optimus Prime Transformers toys for ages 10 and over – Fans of the intrepid Transformers leader can have their own Optimus Prime Robot & Vehicle to build, display or use to save the world</p>
+
+                    <ul class="especificaciones-lista">
+                        <li>
+                            <p>2 buildable BrickHeadz™ models – Both figures feature lots of decorated elements, including a special decoration element on Optimus Prime, plus spinning wheels on the truck display vehicle toy</p>
+                        </li>
+                        <li>
+                            <p>Many ways to enjoy – LEGO® BrickHeadz™ toy models are fun to build, play with and put on display for everyone to admire, and there are 2 instruction booklets so you can build with friends or family</p>
+                        </li>
+                        <li>
+                            <p>Collectible LEGO® sets – Fans can collect and display these Transformers figures with other building sets (sold separately) in the LEGO BrickHeadz™ range</p>
+                        </li>
+                        <li>
+                            <p>A treat for Optimus Prime fans – This pair of collectible BrickHeadz™ figures is a great gift idea for any kid, LEGO® builder, model-maker or fan of the Transformers toys or action-figure playsets</p>
+                        </li>
+                        <li>
+                            <p>Dimensions – This 237-piece kids’ toy includes an Optimus Prime figure that stands over 9 cm (3.5 in.) tall and a truck figure that measures over 7 cm (2.5 in.) high</p>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="especificaciones-imagen">
+                    <img src="https://www.lego.com/cdn/cs/set/assets/bltbd1aeb644f5c988b/40803_boxprod_v39.png?fit=bounds&format=jpg&quality=80&width=320&height=320&dpr=1"
+                        alt="Imagen representativa del modelo Lego: Disney Castle">
+                </div>
+        </details>
+        <details class="Contenido-Desplegable">
+            <summary>Opiniones de Clientes</summary>
+            <div class="Opiniones">
+                <p>Sé el primero en</p>
+                <button>Escribe una Reseña</button>
+            </div>
+        </details>
+        <div class="compra-mas-categorias">
+            <p>Compra más como esto:</p>
+            <a href="#">BrickHeadz</a>
+        </div>
+
+        <hr>
+       <div class="recomendados-seccion">
+            <h2>Recomendado Para Usted</h2>
+            <div class="carrusel">
+                <div class="promo">
+                    <div class="etiqueta-nuevo">Nuevo</div>
+                    <div class="corazon">
+                        <button>
+                            <img src="https://assets.lego.com/icons/v7.3.0/heart.svg" alt="Favorito">
+                        </button>
+                    </div>
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blt800fa631dfa65d59/40804_Prod.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1"
+                        alt="Bumblebee: Robot y Vehículo">
+                
+                    <div class="puntuacion">
+                        <img src="https://assets.lego.com/icons/v7.3.0/birthday-cake.svg" alt="Edad recomendada">
+                        <span>18+</span>
+                        <img src="https://assets.lego.com/icons/v7.3.0/brick-one-by-one-iso.svg" alt="Número de piezas">
+                        <span>4837</span>
+                        <img src="https://assets.lego.com/icons/v7.3.0/star-solid.svg" alt="Valoración">
+                        <span>4.9</span>
+                    </div>
+                
+                    <a class="text_link" href="https://www.lego.com/es-es/product/bumblebee-robot-vehicle-40804">
+                        <span>Bumblebee: Robot y Vehículo</span>
+                    </a>
+                
+                    <div class="costo">$19.99</div>
+                
+                    <button class="boton-comprar">
+                        <img src="https://assets.lego.com/icons/v7.3.0/shopping-bag.svg" alt="Bolsa de compras">
+                        Añadir a la bolsa
+                    </button>
+                </div>                
+                
+                <div class="promo">
+                    <div class="etiqueta-nuevo">Nuevo</div>
+                    <div class="corazon">
+                        <button>
+                            <img src="https://assets.lego.com/icons/v7.3.0/heart.svg" alt="Favorito">
+                        </button>
+                    </div>
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blt84d0ff079d4b2cf2/40793_Prod.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1"
+                        alt="Figuras de Tom y Jerry">
+                
+                    <div class="puntuacion">
+                        <img src="https://assets.lego.com/icons/v7.3.0/birthday-cake.svg" alt="Edad recomendada">
+                        <span>18+</span>
+                        <img src="https://assets.lego.com/icons/v7.3.0/brick-one-by-one-iso.svg" alt="Número de piezas">
+                        <span>811</span>
+                        <img src="https://assets.lego.com/icons/v7.3.0/star-solid.svg" alt="Valoración">
+                        <span>4.9</span>
+                    </div>
+                
+                    <a class="text_link" href="https://www.lego.com/es-es/product/tom-jerry-figures-40793">
+                        <span>Figuras de Tom y Jerry</span>
+                    </a>
+                
+                    <div class="costo">$14.99</div>
+                
+                    <button class="boton-comprar">
+                        <img src="https://assets.lego.com/icons/v7.3.0/shopping-bag.svg" alt="Bolsa de compras">
+                        Añadir a la bolsa
+                    </button>
+                </div>                
+
+                <div class="promo">
+                    <div class="etiqueta-nuevo">Exclusivo</div>
+                    <div class="corazon">
+                        <button>
+                            <img src="https://assets.lego.com/icons/v7.3.0/heart.svg" alt="Favorito">
+                        </button>
+                    </div>
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blt9ddbad35273a1726/40798_Prod_en-gb.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1"
+                        alt="Mei Panda Rojo">
+                
+                    <div class="puntuacion">
+                        <img src="https://assets.lego.com/icons/v7.3.0/birthday-cake.svg" alt="Edad recomendada">
+                        <span>18+</span>
+                        <img src="https://assets.lego.com/icons/v7.3.0/brick-one-by-one-iso.svg" alt="Número de piezas">
+                        <span>2316</span>
+                        <img src="https://assets.lego.com/icons/v7.3.0/star-solid.svg" alt="Valoración">
+                        <span>4.7</span>
+                    </div>
+                
+                    <a class="text_link" href="https://www.lego.com/es-es/product/red-panda-mei-40798">Mei Panda Rojo</a>
+                
+                    <div class="costo">$9.99</div>
+                
+                    <button class="boton-comprar">
+                        <img src="https://assets.lego.com/icons/v7.3.0/shopping-bag.svg" alt="Bolsa de compras">
+                        Añadir a la bolsa
+                    </button>
+                </div>
+
+                <div class="promo">
+                    <div class="etiqueta-nuevo">Nuevo</div>
+                    <div class="corazon">
+                        <button>
+                            <img src="https://assets.lego.com/icons/v7.3.0/heart.svg" alt="Favorito">
+                        </button>
+                    </div>
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blt1df95c33b4c6cbba/40750_Prod.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1"
+                        alt="Miércoles y Enid">
+                
+                    <div class="puntuacion">
+                        <img src="https://assets.lego.com/icons/v7.3.0/birthday-cake.svg" alt="Edad recomendada">
+                        <span>18+</span>
+                        <img src="https://assets.lego.com/icons/v7.3.0/brick-one-by-one-iso.svg" alt="Número de piezas">
+                        <span>2193</span>
+                        <img src="https://assets.lego.com/icons/v7.3.0/star-solid.svg" alt="Valoración">
+                        <span>4.5</span>
+                    </div>
+                
+                    <a class="text_link" href="https://www.lego.com/es-es/product/wednesday-enid-40750">
+                        <span>Miércoles y Enid</span>
+                    </a>
+                
+                    <div class="costo">$19.99</div>
+                
+                    <button class="boton-comprar">
+                        <img src="https://assets.lego.com/icons/v7.3.0/shopping-bag.svg" alt="Bolsa de compras">
+                        Añadir a la bolsa
+                    </button>
+                </div>
+                
+                <div class="promo">
+                    <div class="etiqueta-nuevo">Exclusivo</div>
+                    <div class="corazon">
+                        <button>
+                            <img src="https://assets.lego.com/icons/v7.3.0/heart.svg" alt="Favorito">
+                        </button>
+                    </div>
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blt2825af1e70602e58/40752.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1"
+                        alt="Carl,Rusell y Kevin">
+                
+                    <div class="puntuacion">
+                        <img src="https://assets.lego.com/icons/v7.3.0/birthday-cake.svg" alt="Edad recomendada">
+                        <span>18+</span>
+                        <img src="https://assets.lego.com/icons/v7.3.0/brick-one-by-one-iso.svg" alt="Número de piezas">
+                        <span>3745</span>
+                        <img src="https://assets.lego.com/icons/v7.3.0/star-solid.svg" alt="Valoración">
+                        <span>4.6</span>
+                    </div>
+                
+                    <a class="text_link" href="https://www.lego.com/es-es/product/carl-russell-kevin-40752">Carl, Rusell y Kevin</a>
+                
+                    <div class="costo">$19.99</div>
+                
+                    <button class="boton-comprar">
+                        <img src="https://assets.lego.com/icons/v7.3.0/shopping-bag.svg" alt="Bolsa de compras">
+                        Añadir a la bolsa
+                    </button>
+                </div>                
+
+                <div class="promo">
+                    <div class="etiqueta-nuevo">Exclusivo</div>
+                    <div class="corazon">
+                        <button>
+                            <img src="https://assets.lego.com/icons/v7.3.0/heart.svg" alt="Favorito">
+                        </button>
+                    </div>
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blt0476f46f30bbca33/40749.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1"
+                        alt="Alegría, Tristeza y Ansiedad">
+                
+                    <div class="puntuacion">
+                        <img src="https://assets.lego.com/icons/v7.3.0/birthday-cake.svg" alt="Edad recomendada">
+                        <span>18+</span>
+                        <img src="https://assets.lego.com/icons/v7.3.0/brick-one-by-one-iso.svg" alt="Número de piezas">
+                        <span>2405</span>
+                        <img src="https://assets.lego.com/icons/v7.3.0/star-solid.svg" alt="Valoración">
+                        <span>4.7</span>
+                    </div>
+                
+                    <a class="text_link" href="https://www.lego.com/es-es/product/carl-russell-kevin-40752">Alegría, Tristeza y Ansiedad</a>
+                
+                    <div class="costo">$19.99</div>
+                
+                    <button class="boton-comprar">
+                        <img src="https://assets.lego.com/icons/v7.3.0/shopping-bag.svg" alt="Bolsa de compras">
+                        Añadir a la bolsa
+                    </button>
+                </div>                
+
+                <div class="promo">
+                    <div class="etiqueta-nuevo">Exclusivo</div>
+                    <div class="corazon">
+                        <button>
+                            <img src="https://assets.lego.com/icons/v7.3.0/heart.svg" alt="Favorito">
+                        </button>
+                    </div>
+                    <img src="https://www.lego.com/cdn/cs/set/assets/blt4be686c9aaced5fa/40547.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1"
+                        alt="Obi-Wan Kenobi™ y Darth Vader™">
+                
+                    <div class="puntuacion">
+                        <img src="https://assets.lego.com/icons/v7.3.0/birthday-cake.svg" alt="Edad recomendada">
+                        <span>18+</span>
+                        <img src="https://assets.lego.com/icons/v7.3.0/brick-one-by-one-iso.svg" alt="Número de piezas">
+                        <span>2500</span>
+                        <img src="https://assets.lego.com/icons/v7.3.0/star-solid.svg" alt="Valoración">
+                        <span>4.4</span>
+                    </div>
+                
+                    <a class="text_link" href="https://www.lego.com/es-es/product/obi-wan-kenobi-darth-vader-40547">Obi-Wan Kenobi™ y Darth Vader™</a>
+                
+                    <div class="costo">$19.99</div>
+                
+                    <button class="boton-comprar">
+                        <img src="https://assets.lego.com/icons/v7.3.0/shopping-bag.svg" alt="Bolsa de compras">
+                        Añadir a la bolsa
+                    </button>
+                </div>
+            </div>
+
+        <div class="banner-ayuda">
+            <div class="banner-ayuda-contenido">
+                <img src="https://www.lego.com/_next/static/images/cookieguy-a8400ece3d416842cb83d9f1efc22662.png"
+                    alt="Minifigura LEGO">
+                <div>
+                    <h3>Ayúdanos a construir la experiencia personalizada más increíble para ti</h3>
+                    <p>Ayúdanos a construir la experiencia personalizada más increíble para ti. Danos tu permiso para
+                        usar cookies del sitio y te crearemos una experiencia que seguramente te encantará.</p>
+                    <div>
+                        <a href="#">Hagamos esto</a>
+                        <a href="#">Saber más</a>
+                    </div>
+                </div>
+                <img src="https://www.lego.com/_next/static/images/cookies-afb23abdf31dc35a6f446c474ef33678.png"
+                    alt="Galletas LEGO">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <ul class="elemento">
+            <div class="Lista1">
+                <img class="Logo1" src="IMG/legoicon.png" alt="Logo de la compañia Lego">
+                <button class="country-btn">🌍 United States</button>
+                <a href="#">
+                    <li>Tarjetas Regalo</li>
+                </a>
+                <a href="#">
+                    <li>Encuentra la inspiración</li>
+                </a>
+                <a href="#">
+                    <li>Catálogos LEGO</li>
+                </a>
+            </div>
+            <div class="Lista">
+                <h3>QUIÉNES SOMOS</h3>
+                <a href="#">
+                    <li>The LEGO Group</li>
+                </a>
+                <a href="#">
+                    <li>Noticias LEGO®</li>
+                </a>
+                <a href="#">
+                    <li>Sostenibilidad</li>
+                </a>
+                <a href="#">
+                    <li>Supply Chain Transparency Statement</li>
+                </a>
+                <a href="#">
+                    <li>Calificación de productos LEGO</li>
+                </a>
+                <a href="#">
+                    <li>Ofertas de empleo LEGO</li>
+                </a>
+                <a href="#">
+                    <li>LEGO Compliance Line</li>
+                </a>
+            </div>
+            <div class="Lista">
+                <h3>ATENCIÓN AL CLIENTE</h3>
+                <a href="#">
+                    <li>Ponte en contacto con nosotros</li>
+                </a>
+                <a href="#">
+                    <li>Instrucciones de construcción</li>
+                </a>
+                <a href="#">
+                    <li>Piezas de repuesto</li>
+                </a>
+                <a href="#">
+                    <li>Envíos y devoluciones</li>
+                </a>
+                <a href="#">
+                    <li>Métodos de pago</li>
+                </a>
+                <a href="#">
+                    <li>Términos y condiciones</li>
+                </a>
+                <a href="#">
+                    <li>Productos retirados</li>
+                </a>
+            </div>
+            <div class="Lista">
+                <h3>ATRACCIONES</h3>
+                <a href="#">
+                    <li>LEGO® House</li>
+                </a>
+                <a href="#">
+                    <li>LEGOLAND® Parks</li>
+                </a>
+                <a href="#">
+                    <li>LEGOLAND Discovery Centers</li>
+                </a>
+            </div>
+            <div class="Lista">
+                <h3>MÁS INFORMACIÓN</h3>
+                <a href="#">
+                    <li>LEGO® Magazine (GRATIS)</li>
+                </a>
+                <a href="#">
+                    <li>LEGO Education</li>
+                </a>
+                <a href="#">
+                    <li>LEGO Ideas</li>
+                </a>
+                <a href="#">
+                    <li>LEGO Foundation</li>
+                </a>
+                <a href="#">
+                    <li>Programa para socios</li>
+                </a>
+                <a href="#">
+                    <li>LEGO braille bricks</li>
+                </a>
+            </div>
+        </ul>
+        <br>
+        <ul class="elemento2">
+            <p class="texto-suscripcion">SUSCRÍBETE AL CORREO ELECTRÓNICO DE LEGO® SHOP</p>
+            <div class="suscripcion">
+                <input type="email" placeholder="Your Email Address">
+                <button> &gt; </button>
+            </div>
+
+            <div class="Iconos_Redes">
+                <h3>SÍGUENOS</h3>
+                <a href="https://www.facebook.com/LEGO/"><Img src="IMG/facebook.png" alt="Logo de Facebook"></Img></a>
+                <a href="https://twitter.com/LEGO_Group"><Img src="IMG/twitter.png" alt="Logo de X(Twitter)"></Img></a>
+                <a href="https://www.instagram.com/lego"><Img src="IMG/instagram.png" alt="Logo de Instagram"></Img></a>
+                <a href="https://m.youtube.com/user/LEGO"><Img src="IMG/youtube.png" alt="Logo de Youtube"></Img></a>
+            </div>
+        </ul>
+        <br>
+        <div class="elemento3">
+            <a href="#">
+                <li>Política de privacidad</li>
+            </a>
+            <a href="#">
+                <li>Cookies</li>
+            </a>
+            <a href="#">
+                <li>Aviso Legal</li>
+            </a>
+            <a href="#">
+                <li>Cláusulas de uso</li>
+            </a>
+            <a href="#">
+                <li>Accesibilidad</li>
+            </a>
+            <a href="#">
+                <li>Configuración de cookies</li>
+            </a>
+            <a href="#">
+                <li>No vende ni comparte mi información personal</li>
+            </a>
+        </div>
+        <p>LEGO System A/S, DK-7190 Billund, Dinamarca. Solo se permite la compra en línea a personas mayores de 18
+            años.
+            LEGO, el logotipo LEGO, la minifigura, DUPLO, el logotipo de FRIENDS, el logotipo de MINIFIGURES, DREAMZzz,
+            NINJAGO, VIDIYO y MINDSTORMS son marcas comerciales de The LEGO Group. ©2025 The LEGO Group. Todos los
+            derechos
+            reservados. El uso de este sitio supone la aceptación de las cláusulas de uso.</p>
+    </footer>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
