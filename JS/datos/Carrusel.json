@@ -1,0 +1,158 @@
+{
+    "productos": [
+      {
+        "id": "1",
+        "imagen": "https://www.lego.com/cdn/cs/set/assets/blt72d352ea938eb694/43263_Prod_en-gb.png?format=webply&fit=bounds&quality=100&width=250&height=250&dpr=1",
+        "edad": "18+",
+        "piezas": "2916",
+        "calificacion": "",
+        "nombre": "La Bella y el Castillo de la Bestia",
+        "precio": 279.99,
+        "estado": "Añadir a la Bolsa",
+        "enlace": "ProductosDestacados/Lego_Disney_Castillo/Index.html"
+      },
+      {
+        "id": "2",
+        "imagen": "https://www.lego.com/cdn/cs/set/assets/blt9b9bd9113f7f11d9/72037_Prod_en-gb.png?format=webply&fit=bounds&quality=100&width=250&height=250&dpr=1",
+        "edad": "18+",
+        "piezas": "1972",
+        "calificacion": "",
+        "nombre": "Mario Kart™ – Mario & Standard Kart",
+        "precio": 169.99,
+        "estado": "Pre-orden",
+        "enlace": "ProductosDestacados/Lego_Mario_Kart/Index.html"
+      },
+      {
+        "id": "3",
+        "imagen": "https://www.lego.com/cdn/cs/set/assets/bltdd27a0cbc5886dd2/75429_Prod_en-gb.png?format=webply&fit=bounds&quality=100&width=250&height=250&dpr=1",
+        "edad": "18+",
+        "piezas": "730",
+        "calificacion": "4.5",
+        "nombre": "AT-AT Driver™ Casco",
+        "precio": 69.99,
+        "estado": "Añadir a la Bolsa",
+        "enlace": "#"
+      },
+      {
+        "id": "4",
+        "imagen": "https://www.lego.com/cdn/cs/set/assets/blt1dd4e21e38b03edd/42207_Prod_en-gb.png?format=webply&fit=bounds&quality=100&width=250&height=250&dpr=1",
+        "edad": "18+",
+        "piezas": "1361",
+        "calificacion": "4.5",
+        "nombre": "Ferrari SF-24 F1 Coche",
+        "precio": 229.99,
+        "estado": "Añadir a la Bolsa",
+        "enlace": "#"
+      },
+      {
+        "id": "5",
+        "imagen": "https://www.lego.com/cdn/cs/set/assets/blt6af7a832be10c4d9/40817_Prod_en-gb.png?format=webply&fit=bounds&quality=100&width=250&height=250&dpr=1",
+        "edad": "7+",
+        "piezas": "184",
+        "calificacion": "",
+        "nombre": "Maleta de Viaje Amarilla",
+        "precio": 14.99,
+        "estado": "Añadir a la Bolsa",
+        "enlace": "#"
+      },
+      {
+        "id": "6",
+        "imagen": "https://www.lego.com/cdn/cs/set/assets/blt3e93aaf180737b50/10347_WEB_SEC01_NOBG.png?format=webply&fit=bounds&quality=100&width=250&height=250&dpr=1",
+        "edad": "9+",
+        "piezas": "373",
+        "calificacion": "",
+        "nombre": "Pequeño Ramo Soleado",
+        "precio": 29.99,
+        "estado": "Pre-orden",
+        "enlace": "#"
+      },
+      {
+        "id": "7",
+        "imagen": "https://www.lego.com/cdn/cs/set/assets/blt370b7e8cc1fcceb2/10333.png?format=webply&fit=bounds&quality=100&width=250&height=250&dpr=1",
+        "edad": "18+",
+        "piezas": "5471",
+        "calificacion": "4.2",
+        "nombre": "El Señor de los Anillos: Barad-dûr™",
+        "precio": 459.99,
+        "estado": "Añadir a la Bolsa",
+        "enlace": "#"
+      },
+      {
+        "id": "8",
+        "imagen": "https://www.lego.com/cdn/cs/set/assets/blte22f55d6a533beae/31215_Prod_en-gb.png?fit=crop&quality=80&width=250&height=250&dpr=1",
+        "edad": "18+",
+        "piezas": "2615",
+        "calificacion": "",
+        "nombre": "Vincent van Gogh: Los Girasoles",
+        "precio": 199.99,
+        "estado": "Añadir a la Bolsa",
+        "enlace": "#"
+      },
+      {
+        "id": "9",
+        "imagen": "https://www.lego.com/cdn/cs/set/assets/blt5b5a06f12bb7094a/40816_Prod_en-gb.png?fit=crop&quality=80&width=250&height=250&dpr=1",
+        "edad": "9+",
+        "piezas": "386",
+        "calificacion": "",
+        "nombre": "Huevo de Pascua Decorativo",
+        "precio": 19.99,
+        "estado": "Añadir a la Bolsa",
+        "enlace": "#"
+      },
+      {
+        "id": "10",
+        "imagen": "https://via.placeholder.com/250x250?text=Lindo+Conejito",
+        "edad": "8+",
+        "piezas": "326",
+        "calificacion": "",
+        "nombre": "Lindo Conejito",
+        "precio": 19.99,
+        "estado": "Añadir a la Bolsa",
+        "enlace": "#"
+      },
+      {
+        "id": "11",
+        "imagen": "https://www.lego.com/cdn/cs/set/assets/blt4f26b7d733bbcfce/10362_Prod.png?fit=crop&quality=80&width=250&height=250&dpr=1",
+        "edad": "18+",
+        "piezas": "1101",
+        "calificacion": "",
+        "nombre": "Cafetería Francesa",
+        "precio": 79.99,
+        "estado": "Añadir a la Bolsa",
+        "enlace": "#"
+      },
+      {
+        "id": "12",
+        "imagen": "https://www.lego.com/cdn/cs/set/assets/bltaceac3fbbaf53448/31170_Prod.png?fit=crop&quality=80&width=250&height=250&dpr=1",
+        "edad": "8+",
+        "piezas": "288",
+        "calificacion": "",
+        "nombre": "Fauna Salvaje: Flamenco Rosa",
+        "precio": 24.99,
+        "estado": "Añadir a la Bolsa",
+        "enlace": "#"
+      },
+      {
+        "id": "13",
+        "imagen": "https://www.lego.com/cdn/cs/set/assets/blte6e15d7bc21b3418/42649_Prod_en-gb.png?fit=crop&quality=80&width=250&height=250&dpr=1",
+        "edad": "6+",
+        "piezas": "376",
+        "calificacion": "",
+        "nombre": "Tienda de Golosinas de Heartlake",
+        "precio": 29.99,
+        "estado": "Añadir a la Bolsa",
+        "enlace": "#"
+      },
+      {
+        "id": "14",
+        "imagen": "https://www.lego.com/cdn/cs/set/assets/blta83a881921fd4b76/42170.png?fit=crop&quality=80&width=400&height=400&dpr=1",
+        "edad": "10+",
+        "piezas": "643",
+        "calificacion": "4.3",
+        "nombre": "Moto Kawasaki Ninja H2R",
+        "precio": 84.99,
+        "estado": "Añadir a la Bolsa",
+        "enlace": "ProductosDestacados/Lego_Kawasaki_H2R/partem.html"
+      }
+    ]
+  }  
