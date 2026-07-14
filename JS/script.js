@@ -30,8 +30,9 @@ window.addEventListener("scroll", function() {
 // Función para cargar los datos del JSON
 async function cargarProductos() {
     try {
-        // Cargamos el JSON desde la carpeta JS/datos
-        const respuesta = await fetch('./JS/datos/productos.json');
+        const basePath = window.location.pathname.replace(/\/[^/]*$/, '/');
+        const urlProductos = new URL('JS/datos/productos.json', `${window.location.origin}${basePath}`).toString();
+        const respuesta = await fetch(`${urlProductos}?v=${Date.now()}`);
         
         // Verificamos si la respuesta es correcta
         if (!respuesta.ok) {
@@ -45,7 +46,7 @@ async function cargarProductos() {
         console.error('Error al cargar los productos:', error);
         
         // En caso de error, mostramos un mensaje en la consola y devolvemos un array vacío
-        console.log('Asegúrate de que el archivo ./JS/datos/productos.json existe y es accesible');
+        console.log('Asegúrate de que el archivo JS/datos/productos.json existe y es accesible');
         return [];
     }
 }
